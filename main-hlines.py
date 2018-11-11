@@ -1,4 +1,4 @@
-#!/usr/bin/python3
+#!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 
 from numpy import pi
@@ -16,12 +16,12 @@ GAMMA = 1.5
 TWOPI = 2.0*pi
 
 BACK = [1,1,1,1]
-FRONT = [0,1,1,0.001]
+FRONT = [0.1,0.1,0.1,0.0005]
 
 SIZE = 5000
 PIX = 1.0/SIZE
 
-GRID_Y = 100
+GRID_Y = 10
 
 EDGE = 0.08
 LEAP_Y = (1.0-2*EDGE)/(GRID_Y-1)*0.5*0.75
@@ -84,7 +84,7 @@ def main():
     try:
       itt, xy = next(si)
       sand.paint_dots(xy)
-      if not itt%(500*GRID_Y):
+      if not itt%(5000*GRID_Y):
         print(itt)
         sand.write_to_png(fn.name(), GAMMA)
     except Exception as e:
@@ -95,4 +95,3 @@ def main():
 
 if __name__ == '__main__':
   main()
-
