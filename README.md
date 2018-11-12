@@ -2,8 +2,6 @@
 
 ![img](/img/img.png?raw=true "img")
 
-![img](/img/img2.png?raw=true "img")
-
 If you recognize the effect it may be because you have seen it before:
 
 This code is forked from https://github.com/inconvergent/sand-spline
